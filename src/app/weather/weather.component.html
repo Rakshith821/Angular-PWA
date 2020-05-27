@@ -1,0 +1,22 @@
+<article class="widget">
+  <div>
+    <img [src]="weather.icon" alt="" style="height: 100px">
+  </div>
+  <div class="weatherData">
+    <h1 class="temperature">{{weather.temperature}}</h1>
+    <h2 class="description">{{weather.conditions}}</h2>
+    <h3 class="city">{{weather.city}}</h3>
+  </div>
+  <div class="date">
+    <h4 class="month" id="month"></h4>
+    <h5 class="day" id="day"></h5>
+  </div>
+</article>
+
+<form (ngSubmit)="submit()">
+  City:<br>
+  <input type="text" name="city" [(ngModel)]="city"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<button (click)="subToNotify()">Subscribe to notification</button>
